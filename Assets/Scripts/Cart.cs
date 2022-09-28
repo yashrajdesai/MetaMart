@@ -15,8 +15,6 @@ public class Cart : MonoBehaviour
     {
         
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            GetComponent<Rigidbody>().AddForce(transform.forward * 4, ForceMode.VelocityChange);
-        }
         if (Input.GetKeyUp(KeyCode.UpArrow)) {
             GetComponent<Rigidbody>().velocity =Vector3.zero;
         }
