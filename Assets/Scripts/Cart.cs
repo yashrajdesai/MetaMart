@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Cart : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Cart : MonoBehaviour
     {
         
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            GetComponent<Rigidbody>().AddForce(Vector3.forward * 4, ForceMode.VelocityChange);
+            GetComponent<Rigidbody>().AddForce(transform.forward * 4, ForceMode.VelocityChange);
         }
         if (Input.GetKeyUp(KeyCode.UpArrow)) {
             GetComponent<Rigidbody>().velocity =Vector3.zero;
@@ -27,7 +28,9 @@ public class Cart : MonoBehaviour
             GetComponent<Rigidbody>().velocity =Vector3.zero;
         }
         // if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-        //     GetComponent<Rigidbody>().transform.Rotate(0.0f, 30.0f, 0.0f, Space.Self);
+        //      Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, 10, 0) * Time.fixedDeltaTime);
+        //      GetComponent<Rigidbody>().MoveRotation(GetComponent<Rigidbody>().rotation * deltaRotation);
+        //     // GetComponent<Rigidbody>().transform.Rotate();
         // }
     }
 }
