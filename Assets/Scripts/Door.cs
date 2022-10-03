@@ -14,16 +14,37 @@ namespace WaveCaveGames{
 		[HideInInspector] public bool open;
 		float t;
 
-		void Awake(){
-			if (movingType < 0 || movingType > 5) {
-				locked = true;
-				Debug.LogWarning("Door object '" + name + "' has invalid moving type, this door will be locked.");
+		// void Awake(){
+		// 	Debug.Log ("Awake");
+
+		// 	if (movingType < 0 || movingType > 5) {
+		// 		locked = true;
+		// 		Debug.LogWarning("Door object '" + name + "' has invalid moving type, this door will be locked.");
+		// 	}
+		// 	//for custom scripting convenience, door should open in behaviour but not in the scene
+		// 	if (locked) open = true;
+		// 	//disable on awake. since it handles during the enabling action
+		// 	enabled = false;
+		// }
+
+		void OnTriggerEnter(Collider other)
+		{
+
+			if (other.gameObject.tag == "Cart")
+			{
+			Debug.Log ("Contact");
+			open = true;
 			}
-			//for custom scripting convenience, door should open in behaviour but not in the scene
-			if (locked) open = true;
-			//disable on awake. since it handles during the enabling action
-			enabled = false;
+			// if (movingType < 0 || movingType > 5) {
+			// 	locked = true;
+			// 	Debug.LogWarning("Door object '" + name + "' has invalid moving type, this door will be locked.");
+			// }
+			// //for custom scripting convenience, door should open in behaviour but not in the scene
+			// if (locked) open = true;
+			// //disable on awake. since it handles during the enabling action
+			// enabled = false;
 		}
+
 		void Update(){
 			t += Time.deltaTime;
 			Vector3 v = (movingType < 3) ? transform.localEulerAngles : transform.localPosition;
