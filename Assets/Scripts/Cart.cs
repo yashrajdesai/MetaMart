@@ -25,7 +25,7 @@ public class Cart : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.DownArrow)) {
             GetComponent<Rigidbody>().velocity =Vector3.zero;
-        }
+        } 
         // if (Input.GetKeyDown(KeyCode.LeftArrow)) {
         //     GetComponent<Rigidbody>().transform.Rotate(0.0f, 30.0f, 0.0f, Space.Self);
         //                   
