@@ -3,7 +3,7 @@ using UnityEngine.UI;
  
 public class ItemClick : MonoBehaviour {
 
-    public Text my_text;
+    // public TextMeshProUGUI my_text;
  
     public Image image;
 
@@ -33,7 +33,7 @@ public class ItemClick : MonoBehaviour {
         description = GameObject.Find ("Description");
         price_label = GameObject.Find ("Price_label");
         price_number = GameObject.Find ("Price_number");
-        my_text = price_number.GetComponent<Text>();
+        // my_text = price_number.GetComponent<TMPro.TextMeshProUGUI>(); 
         current_bid_label = GameObject.Find ("Current_Bid_label");
         current_bid_number = GameObject.Find ("Current_Bid_number");
         your_bid_label = GameObject.Find ("Your_Bid_Label");
@@ -75,7 +75,7 @@ public class ItemClick : MonoBehaviour {
         your_bid_inputfield.SetActive(true);
         addToCartButton.SetActive(true); 
 
-        my_text.text = "30$";
+        // my_text.text = "30$";
 
     }
 }
