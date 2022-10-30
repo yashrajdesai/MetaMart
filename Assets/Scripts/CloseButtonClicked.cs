@@ -6,11 +6,17 @@ public class CloseButtonClicked : ItemClick
 {
 
     void Start() {
-        addToCartButton = GameObject.Find ("add_to_cart");
+        background = GameObject.Find ("item_background");
         closeButton = GameObject.Find ("Close");
+        product_name = GameObject.Find ("Product_Name");
+        description = GameObject.Find ("Description");
         price_label = GameObject.Find ("Price_label");
         price_number = GameObject.Find ("Price_number");
-        description = GameObject.Find ("Description");
+        current_bid_label = GameObject.Find ("Current_Bid_label");
+        current_bid_number = GameObject.Find ("Current_Bid_number");
+        your_bid_label = GameObject.Find ("Your_Bid_Label");
+        your_bid_inputfield = GameObject.Find ("Your_Bid_InputField");
+        addToCartButton = GameObject.Find ("add_to_cart");
     }
 
 
@@ -22,11 +28,17 @@ public class CloseButtonClicked : ItemClick
 
     public void ButtonClicked() {
 
-        addToCartButton.SetActive(false); 
+        background.SetActive(false); 
         closeButton.SetActive(false); 
+        product_name.SetActive(false);
+        description.SetActive(false);
         price_label.SetActive(false);
         price_number.SetActive(false);
-        description.SetActive(false);
+        current_bid_label.SetActive(false);
+        current_bid_number.SetActive(false);
+        your_bid_label.SetActive(false);
+        your_bid_inputfield.SetActive(false);
+        addToCartButton.SetActive(false); 
 
         image.enabled = false;
     }
