@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using TMPro;
 
 public class BidUpdater : MonoBehaviour
 {
+
     private TextMeshProUGUI textMesh;
     private int bid;
 
@@ -18,7 +20,11 @@ public class BidUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = bid.ToString();
-        bid++;
+        textMesh.text = bid.ToString() + "ETH";
+        // bid++;
+    }
+
+    public void UpdateBid(string userBid){
+        bid = Convert.ToInt16(userBid);;
     }
 }
