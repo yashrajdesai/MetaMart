@@ -17,6 +17,7 @@ public class CloseButtonClicked : ItemClick
         your_bid_label = GameObject.Find ("Your_Bid_Label");
         your_bid_inputfield = GameObject.Find ("Your_Bid_InputField");
         addToCartButton = GameObject.Find ("add_to_cart");
+        item_panel=GameObject.Find("item_back_panel");
     }
 
 
@@ -39,6 +40,7 @@ public class CloseButtonClicked : ItemClick
         your_bid_label.SetActive(false);
         your_bid_inputfield.SetActive(false);
         addToCartButton.SetActive(false); 
+        item_panel.SetActive(false);
 
         image.enabled = false;
     }

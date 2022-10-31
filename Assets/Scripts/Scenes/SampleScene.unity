@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1230,6 +1230,8 @@ RectTransform:
   - {fileID: 432019274}
   - {fileID: 211475330}
   - {fileID: 633626199}
+  - {fileID: 1968872503}
+  - {fileID: 1858097592}
   m_Father: {fileID: 872896518}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1344,7 +1346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192, y: 90}
+  m_AnchoredPosition: {x: 161, y: 90}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314551681
@@ -1964,8 +1966,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288453805
-  m_fontColor: {r: 0.6792453, g: 0.6113208, b: 0.6113208, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.103773594, g: 0.082725175, b: 0.082725175, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2416,6 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 211475331}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -2427,6 +2430,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!4 &546841256
 Transform:
   m_ObjectHideFlags: 0
@@ -3316,6 +3320,82 @@ Transform:
   m_Father: {fileID: 1341249597}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &680853501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680853502}
+  - component: {fileID: 680853504}
+  - component: {fileID: 680853503}
+  m_Layer: 1
+  m_Name: item_backg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &680853502
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680853501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 33}
+  m_LocalScale: {x: 3.4481895, y: 4.4067836, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 872896518}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 741, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &680853503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680853501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 85992451e5512a24a8ec40d31eed1f79, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &680853504
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680853501}
+  m_CullTransparentMesh: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,8 +3626,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284374627
-  m_fontColor: {r: 0.3882353, g: 0.36862746, b: 0.36862746, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.101960786, g: 0.08235294, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3704,6 +3784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -3715,6 +3796,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &736396378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4124,8 +4206,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284308835
-  m_fontColor: {r: 0.38679248, g: 0.36635816, b: 0.36635816, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.101960786, g: 0.08235294, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4148,7 +4230,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4435,7 +4517,7 @@ RectTransform:
   - {fileID: 1442644838}
   - {fileID: 729963406}
   - {fileID: 290114389}
-  - {fileID: 1968872503}
+  - {fileID: 680853502}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4602,6 +4684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 211475331}
+  item_backg: {fileID: 680853503}
   background: {fileID: 1968872502}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -4613,6 +4696,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &899678611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5493,6 +5577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -5504,6 +5589,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &1053879078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6482,8 +6568,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288453806
-  m_fontColor: {r: 0.68235296, g: 0.6117647, b: 0.6117647, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.101960786, g: 0.08235294, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6653,7 +6739,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -7066,6 +7152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1442644839}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -7077,6 +7164,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1 &1341249596
 GameObject:
   m_ObjectHideFlags: 0
@@ -7312,6 +7400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -7323,6 +7412,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &1396660711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7947,6 +8037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -7958,6 +8049,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &1491254582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8644,8 +8736,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284374627
-  m_fontColor: {r: 0.3882353, g: 0.36862746, b: 0.36862746, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.101960786, g: 0.08235294, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9203,6 +9295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -9214,6 +9307,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1 &1806130011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9593,6 +9687,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4594510504227292586, guid: 0e387dc5e5acc1b4d93d3143814af2cd, type: 3}
   m_PrefabInstance: {fileID: 1856235829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1858097591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858097592}
+  - component: {fileID: 1858097594}
+  - component: {fileID: 1858097593}
+  m_Layer: 5
+  m_Name: item_back_panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1858097592
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858097591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 33}
+  m_LocalScale: {x: 3.348469, y: 3.4358714, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 290114389}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 12, y: -89}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1858097593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858097591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9245283, g: 0.8977887, b: 0.58873266, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 85992451e5512a24a8ec40d31eed1f79, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1858097594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858097591}
+  m_CullTransparentMesh: 1
 --- !u!4 &1865344696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 434302, guid: bbcc191f05afe484faa95b4f6609cc83, type: 3}
@@ -9678,6 +9848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -9689,6 +9860,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1 &1917126973
 GameObject:
   m_ObjectHideFlags: 0
@@ -9783,6 +9955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 582580661}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -9794,6 +9967,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!114 &1925250710 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114004025715631432, guid: 5b9efa64854ebe240a49a2087de2f179, type: 3}
@@ -10097,8 +10271,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284769381
-  m_fontColor: {r: 0.3962264, g: 0.39398363, b: 0.39398363, a: 1}
+    rgba: 4279571738
+  m_fontColor: {r: 0.101960786, g: 0.08235294, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10254,16 +10428,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968872502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 478}
   m_LocalScale: {x: 386.57648, y: 468.73154, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 872896518}
-  m_RootOrder: 4
+  m_Father: {fileID: 290114389}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: 1}
+  m_AnchoredPosition: {x: 1003, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1968872504
@@ -10916,6 +11090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1442644839}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -10927,6 +11102,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1 &2106484138
 GameObject:
   m_ObjectHideFlags: 0
@@ -11075,6 +11251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -11086,6 +11263,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!4 &2142667947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 421088, guid: 7e458f9409c5c5c49ae7afb19d4930a8, type: 3}
@@ -11104,6 +11282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1442644839}
+  item_backg: {fileID: 0}
   background: {fileID: 0}
   closeButton: {fileID: 0}
   product_name: {fileID: 0}
@@ -11115,6 +11294,7 @@ MonoBehaviour:
   your_bid_label: {fileID: 0}
   your_bid_inputfield: {fileID: 0}
   addToCartButton: {fileID: 0}
+  item_panel: {fileID: 0}
 --- !u!1001 &3816198204809534340
 PrefabInstance:
   m_ObjectHideFlags: 0
