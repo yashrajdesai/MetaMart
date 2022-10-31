@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// using UnityEngine.UI;
+using TMPro;
 
 public class FetchBidValue : MonoBehaviour
 {
 
-    private string input;
+    // public string bid;
+    // public GameObject inputfield;
+    // public GameObject textDisplay;
+    public TMP_InputField bid;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +24,10 @@ public class FetchBidValue : MonoBehaviour
         
     }
 
-    public void ReadStringInput(string s)
+    public void setBid(string s)
     {
-        input = s;
-        Debug.Log(input);
+        // bid = inputfield.GetComponent<Text>().text;
+        Debug.Log(bid.text);
+        FindObjectOfType<BidUpdater>().UpdateBid(bid.text);
     }
 }
