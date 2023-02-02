@@ -6,6 +6,7 @@ public class ItemClick : MonoBehaviour {
     // public TextMeshProUGUI my_text;
  
     public Image image;
+    public Image item_backg;
 
     public GameObject background;
     public GameObject closeButton;
@@ -18,6 +19,7 @@ public class ItemClick : MonoBehaviour {
     public GameObject your_bid_label;
     public GameObject your_bid_inputfield;
     public GameObject addToCartButton;
+    public GameObject item_panel;
 
 
     // bool isAddToButtonActive = false;
@@ -26,6 +28,7 @@ public class ItemClick : MonoBehaviour {
     void Start() {
         // Turns the image off.
         image.enabled = false;
+        item_backg.enabled=false;
 
         background = GameObject.Find ("item_background");
         closeButton = GameObject.Find ("Close");
@@ -39,6 +42,7 @@ public class ItemClick : MonoBehaviour {
         your_bid_label = GameObject.Find ("Your_Bid_Label");
         your_bid_inputfield = GameObject.Find ("Your_Bid_InputField");
         addToCartButton = GameObject.Find ("add_to_cart");
+        item_panel=GameObject.Find("item_back_panel");
 
         background.SetActive(false); 
         closeButton.SetActive(false); 
@@ -51,13 +55,14 @@ public class ItemClick : MonoBehaviour {
         your_bid_label.SetActive(false);
         your_bid_inputfield.SetActive(false);
         addToCartButton.SetActive(false); 
+        item_panel.SetActive(false);
 
     }
  
     void OnMouseDown() {
         // Turns the image on if it is off, and off if it is on.
         image.enabled = true;
-
+        item_backg.enabled=true;
         // isAddToButtonActive = !isAddToButtonActive;
         // isCloseButtonActive = !isCloseButtonActive;
         // Text tempUpgradeTxt = (Text)Instantiate (price_number);
@@ -74,6 +79,7 @@ public class ItemClick : MonoBehaviour {
         your_bid_label.SetActive(true);
         your_bid_inputfield.SetActive(true);
         addToCartButton.SetActive(true); 
+        item_panel.SetActive(true);
 
         // my_text.text = "30$";
 
