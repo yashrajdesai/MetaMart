@@ -6,7 +6,7 @@ public class ItemClick : MonoBehaviour {
     // public TextMeshProUGUI my_text;
  
     public Image image;
-    public Image item_backg;
+    // public Image item_backg;
 
     public GameObject background;
     public GameObject closeButton;
@@ -28,7 +28,7 @@ public class ItemClick : MonoBehaviour {
     void Start() {
         // Turns the image off.
         image.enabled = false;
-        item_backg.enabled=false;
+        // item_backg.enabled=false;
 
         background = GameObject.Find ("item_background");
         closeButton = GameObject.Find ("Close");
@@ -62,7 +62,7 @@ public class ItemClick : MonoBehaviour {
     void OnMouseDown() {
         // Turns the image on if it is off, and off if it is on.
         image.enabled = true;
-        item_backg.enabled=true;
+        // item_backg.enabled=true;
         // isAddToButtonActive = !isAddToButtonActive;
         // isCloseButtonActive = !isCloseButtonActive;
         // Text tempUpgradeTxt = (Text)Instantiate (price_number);
