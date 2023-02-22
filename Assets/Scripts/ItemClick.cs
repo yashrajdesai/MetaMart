@@ -33,7 +33,7 @@ public class ItemClick : MonoBehaviour {
         background = GameObject.Find ("item_background");
         closeButton = GameObject.Find ("Close");
         product_name = GameObject.Find ("Product_Name");
-        description = GameObject.Find ("Description");
+        description = GameObject.Find ("Description_product");
         price_label = GameObject.Find ("Price_label");
         price_number = GameObject.Find ("Price_number");
         // my_text = price_number.GetComponent<TMPro.TextMeshProUGUI>(); 
