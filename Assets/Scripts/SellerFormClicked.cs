@@ -36,6 +36,7 @@ public class SellerFormClicked : MonoBehaviour
     void Start() {
         // Turns the image off.
         // image.enabled = false;
+
         item_backg.enabled=false;
 
         sellerDashboard_heading = GameObject.Find ("SellerDashboard_heading");
@@ -78,8 +79,10 @@ public class SellerFormClicked : MonoBehaviour
  
     public void sellerFormButtonClicked() {
         // Turns the image on if it is off, and off if it is on.
+
         // image.enabled = true;
         item_backg.enabled=true;
+
         // isAddToButtonActive = !isAddToButtonActive;
         // isCloseButtonActive = !isCloseButtonActive;
         // Text tempUpgradeTxt = (Text)Instantiate (price_number);
