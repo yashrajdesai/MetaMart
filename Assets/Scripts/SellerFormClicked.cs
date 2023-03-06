@@ -28,6 +28,9 @@ public class SellerFormClicked : MonoBehaviour
     public GameObject auctionEndTime_text;
     public GameObject submit_button;
     public GameObject closeSellerForm;
+    public GameObject item_label;
+    public GameObject item_Dropdown;
+    
 
 
     // bool isAddToButtonActive = false;
@@ -56,6 +59,8 @@ public class SellerFormClicked : MonoBehaviour
         auctionEndTime_text = GameObject.Find ("AuctionEndTime_text");
         submit_button = GameObject.Find ("SubmitButton");
         closeSellerForm = GameObject.Find("CloseSellerForm");
+        item_label = GameObject.Find ("item_label");
+        item_Dropdown = GameObject.Find("item_Dropdown");
 
         sellerDashboard_heading.SetActive(false);
         productName_label.SetActive(false);
@@ -74,7 +79,8 @@ public class SellerFormClicked : MonoBehaviour
         auctionEndTime_text.SetActive(false);
         submit_button.SetActive(false); 
         closeSellerForm.SetActive(false);
-
+        item_label.SetActive(false); 
+        item_Dropdown.SetActive(false);
     }
  
     public void sellerFormButtonClicked() {
@@ -105,6 +111,7 @@ public class SellerFormClicked : MonoBehaviour
         auctionEndTime_text.SetActive(true);
         submit_button.SetActive(true); 
         closeSellerForm.SetActive(true);
-
+        item_label.SetActive(true); 
+        item_Dropdown.SetActive(true);
     }
 }
