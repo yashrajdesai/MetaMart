@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WindowGraph : MonoBehaviour
 {
-    [SerializeField] private Sprite circleSprite;
+    [SerializeField] private Sprite dotSprite;
     private RectTransform graphContainer;
 
     private void Awake() {
@@ -16,10 +16,10 @@ public class WindowGraph : MonoBehaviour
         ShowGraph(valueList);
     }
 
-    private GameObject CreateCircle(Vector2 anchoredPosition) {
-        GameObject gameObject = new GameObject("circle", typeof(Image));
+    private GameObject CreateDot(Vector2 anchoredPosition) {
+        GameObject gameObject = new GameObject("dot", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
-        gameObject.GetComponent<Image>().sprite = circleSprite;
+        gameObject.GetComponent<Image>().sprite = dotSprite;
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = anchoredPosition;
         rectTransform.sizeDelta = new Vector2(11, 11);
@@ -33,16 +33,16 @@ public class WindowGraph : MonoBehaviour
         float yMaximum = 100f;
         float xSize = 50f;
 
-        GameObject lastCircleGameObject = null;
-        for (int i = 0; i < valueList.Count; i++) {
-            float xPosition = xSize + i * xSize;
-            float yPosition = (valueList[i] / yMaximum) * graphHeight;
-            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition));
-            if (lastCircleGameObject != null) {
-                CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
-            }
-            lastCircleGameObject = circleGameObject;
-        }
+        // GameObject lastDotGameObject = null;
+        // for (int i = 0; i < valueList.Count; i++) {
+        //     float xPosition = xSize + i * xSize;
+        //     float yPosition = (valueList[i] / yMaximum) * graphHeight;
+        //     GameObject dotGameObject = CreateDot(new Vector2(xPosition, yPosition));
+        //     if (lastDotGameObject != null) {
+        //         CreateDotConnection(lastDotGameObject.GetComponent<RectTransform>().anchoredPosition, dotGameObject.GetComponent<RectTransform>().anchoredPosition);
+        //     }
+        //     lastDotGameObject = dotGameObject;
+        // }
     }
 
     private void CreateDotConnection(Vector2 dotPositionA, Vector2 dotPositionB) {
@@ -59,6 +59,16 @@ public class WindowGraph : MonoBehaviour
         // rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
 
+    private GameObject CreateBar(Vector2 graphPosition, float barWidth){
+        GameObject gameObject = new GameObject("bar", typeof(Image));
+        gameObject.transform.SetParent(graphContainer, false);
+        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
+        rectTransform.anchoredPosition = graphPosition;
+        rectTransform.sizeDelta = new Vector2(11, 11);
+        rectTransform.anchorMin = new Vector2(0, 0);
+        rectTransform.anchorMax = new Vector2(0, 0);
+        return gameObject;
+    }
     // Start is called before the first frame update
     // void Start()
     // {
