@@ -27,6 +27,8 @@ public class CloseSellerForm : MonoBehaviour
     public GameObject auctionEndTime_text;
     public GameObject submit_button;
     public GameObject closeSellerForm;
+    public GameObject item_label;
+    public GameObject item_Dropdown;
 
     void Start() {
 
@@ -47,6 +49,8 @@ public class CloseSellerForm : MonoBehaviour
         auctionEndTime_text = GameObject.Find ("AuctionEndTime_text");
         submit_button = GameObject.Find ("SubmitButton");
         closeSellerForm = GameObject.Find("CloseSellerForm");
+        item_label = GameObject.Find ("item_label");
+        item_Dropdown = GameObject.Find("item_Dropdown");
     }
 
 
@@ -75,6 +79,8 @@ public class CloseSellerForm : MonoBehaviour
         auctionEndTime_text.SetActive(false);
         submit_button.SetActive(false); 
         closeSellerForm.SetActive(false);
+        item_label.SetActive(false); 
+        item_Dropdown.SetActive(false);
 
         item_backg.enabled = false;
     }

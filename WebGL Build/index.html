@@ -90,6 +90,7 @@
 
       var script = document.createElement("script");
       script.src = loaderUrl;
+      var myGameInstance = null;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
@@ -98,11 +99,37 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
+          myGameInstance = unityInstance;
         }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+      import { getDatabase } from "firebase/database";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAxRacpmNG6abeRxhUqOZZbrOsaCaAekuU",
+        authDomain: "metamart-ce022.firebaseapp.com",
+        databaseURL: "https://metamart-ce022-default-rtdb.firebaseio.com",
+        projectId: "metamart-ce022",
+        storageBucket: "metamart-ce022.appspot.com",
+        messagingSenderId: "518311096217",
+        appId: "1:518311096217:web:fc71cd8a6782431fe3ad08",
+        measurementId: "G-MGJ3SWWKMS"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
     </script>
   </body>
 </html>

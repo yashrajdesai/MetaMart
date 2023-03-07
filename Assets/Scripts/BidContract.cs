@@ -17,29 +17,29 @@ public class BidContract : MonoBehaviour
         
     }
 
-    public async void auctionBid()
-    {
-        // string chain = "ethereum";
-        // set network mainnet, testnet
-        // string network = "goerli";
-        // smart contract method to call
-        // string method = "bid";
-        // // abi in json form
-        // // address of contract
-        // string contract = "0x598d7Ba48C368D13408E7a46c8171659e1915297";
-        // // array of arguments for contract
-        // string value = "30";
-        // // array of arguments for contract you can also add a nonce here as optional parameter
-        // string[] obj = {value};
-        // // string[] obj = {""};
-        // string args = JsonConvert.SerializeObject(obj);
-        // // string args = "[]";
-        // // connects to user's browser wallet to call a transaction
-        // string response = await Web3GL.SendContract(method, abi, contract, args, "30", "", "");
-        // // connects to user's browser wallet to call a transaction
-        // // string response = await EVM.Call(contract, abi, value, method, args);
-        // // display response in game
-        // print(response);
+    // public async void auctionBid()
+    // {
+    //     // string chain = "ethereum";
+    //     // set network mainnet, testnet
+    //     // string network = "goerli";
+    //     // smart contract method to call
+    //     // string method = "bid";
+    //     // // abi in json form
+    //     // // address of contract
+    //     // string contract = "0x598d7Ba48C368D13408E7a46c8171659e1915297";
+    //     // // array of arguments for contract
+    //     // string value = "30";
+    //     // // array of arguments for contract you can also add a nonce here as optional parameter
+    //     // string[] obj = {value};
+    //     // // string[] obj = {""};
+    //     // string args = JsonConvert.SerializeObject(obj);
+    //     // // string args = "[]";
+    //     // // connects to user's browser wallet to call a transaction
+    //     // string response = await Web3GL.SendContract(method, abi, contract, args, "30", "", "");
+    //     // // connects to user's browser wallet to call a transaction
+    //     // // string response = await EVM.Call(contract, abi, value, method, args);
+    //     // // display response in game
+    //     // print(response);
 
         string method = "bid";
         // abi in json format
