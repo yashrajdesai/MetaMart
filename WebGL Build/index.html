@@ -90,7 +90,7 @@
 
       var script = document.createElement("script");
       script.src = loaderUrl;
-      var myGameInstance = null;
+      // var myGameInstance = null;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
@@ -99,14 +99,14 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
-          myGameInstance = unityInstance;
+          // myGameInstance = unityInstance;
         }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
     </script>
-    <script type="module">
+    <!-- <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
@@ -130,6 +130,6 @@
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
-    </script>
+    </script> -->
   </body>
 </html>
